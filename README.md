@@ -110,7 +110,7 @@ This time, you should see output indicating your security group was properly upd
 
 ## Configure your Lambda function’s trigger
 After you have validated that your function is executing properly, it’s time to connect it to the SNS topic for IP changes. To do this, use the AWS Command Line Interface (CLI). Enter the following command, making sure to replace <Lambda ARN> with the Amazon Resource Name (ARN) of your Lambda function. You will find this ARN at the top right when viewing the configuration of your Lambda function.
-'aws sns subscribe --topic-arn arn:aws:sns:us-east-1:806199016981:AmazonIpSpaceChanged --protocol lambda --notification-endpoint <Lambda ARN>'
+`aws sns subscribe --topic-arn arn:aws:sns:us-east-1:806199016981:AmazonIpSpaceChanged --protocol lambda --notification-endpoint <Lambda ARN>`
 
 You should receive an ARN of your Lambda function’s SNS subscription. Your Lambda function will now be invoked whenever AWS publishes new IP ranges!
 ***
